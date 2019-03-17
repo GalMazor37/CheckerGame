@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70703392-901F-4D94-A21E-9B1DD79224DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ex5.UI</RootNamespace>
+    <AssemblyName>Ex5.UI</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ConstantsUI.cs" />
+    <Compile Include="FormGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGame.Designer.cs">
+      <DependentUpon>FormGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameBoardUI.cs" />
+    <Compile Include="LogInExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PictureBoxInTheBoard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsLogin.Designer.cs">
+      <DependentUpon>SettingsLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartPlaying.cs" />
+    <Compile Include="VerifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyForm.Designer.cs">
+      <DependentUpon>VerifyForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LogInExceptionForm.resx">
+      <DependentUpon>LogInExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsLogin.resx">
+      <DependentUpon>SettingsLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyForm.resx">
+      <DependentUpon>VerifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CheckerLogic\CheckerLogic.csproj">
+      <Project>{958fde49-d9dc-4e51-9dd3-2b7f54e2d7b4}</Project>
+      <Name>CheckerLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_Circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_Png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_PngYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_marble.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_soldier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown_square.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\damka3d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart_Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informationPng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_Png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_soldier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_Png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whitesquare.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\damka_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkered.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
